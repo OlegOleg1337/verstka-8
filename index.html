@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ремонт техники брендов</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="services">
+  <h2 class="services__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
+
+  <div class="services__brands-wrapper">
+    <ul class="services__brands-list services__brands-list--collapsed">
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/samsung.png" alt="Samsung" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/apple.png" alt="Apple" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/viewsonic.png" alt="ViewSonic" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/bosch.png" alt="Bosch" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/hp.png" alt="HP" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/acer.png" alt="Acer" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item">
+        <a href="" class="services__brands-link">
+          <img src="img/sony.png" alt="Sony" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item services__brands-item--extra">
+        <a href="" class="services__brands-link">
+          <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item services__brands-item--extra">
+        <a href="" class="services__brands-link">
+          <img src="img/samsung.png" alt="Samsung" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+      <li class="services__brands-item services__brands-item--extra">
+        <a href="#" class="services__brands-link">
+          <img src="img/apple.png" alt="Apple" class="services__brands-logo" />
+          <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <button class="services__toggle-btn" type="button">
+    <img src="img/expand.png" alt="" class="services__toggle-icon" />
+    <span class="services__toggle-text">Показать все</span>
+  </button>
+</section>
+
+<script>
+  const toggleBtn = document.querySelector('.services__toggle-btn');
+  const toggleText = toggleBtn.querySelector('.services__toggle-text');
+  const list = document.querySelector('.services__brands-list');
+
+  toggleBtn.addEventListener('click', () => {
+    list.classList.toggle('services__brands-list--collapsed');
+    toggleText.textContent = list.classList.contains('services__brands-list--collapsed')
+      ? 'Показать все'
+      : 'Скрыть';
+  });
+</script>
+
+</body>
+</html>

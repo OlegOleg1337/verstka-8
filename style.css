@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f8f8f8;
+  }
+  
+  .services {
+    padding: 24px 16px;
+    background: #f8f8f8;
+    max-width: 1120px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .services__title {
+    font-size: 14px;
+    color: #7e7e82;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .services__brands-wrapper {
+    overflow-x: auto;
+  }
+  
+  .services__brands-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+  }
+  
+  .services__brands-item {
+    flex: 0 0 auto;
+    min-width: 240px;
+  }
+  
+  .services__brands-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    padding: 16px 24px;
+    height: 72px;
+    background: #fff;
+    transition: box-shadow 0.3s;
+    box-sizing: border-box;
+  }
+  
+  .services__brands-link:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services__brands-logo {
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .services__brands-arrow {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .services__toggle-btn {
+    display: none;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #1c69d4;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 24px;
+    text-align: left;
+  
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .services__toggle-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  @media (min-width: 768px) {
+    .services__brands-wrapper {
+      overflow-x: hidden;
+    }
+  
+    .services__brands-list {
+      flex-wrap: wrap;
+    }
+  
+    .services__brands-item {
+      flex: 0 0 calc(33.333% - 11px);
+    }
+  
+    .services__brands-list--collapsed .services__brands-item--extra {
+      display: none;
+    }
+  
+    .services__toggle-btn {
+      display: flex;
+    }
+  }
+  
+/*декстоп*/
+  @media (min-width: 1120px) {
+    .services__brands-item {
+      flex: 0 0 calc(25% - 12px);
+    }
+  }
+  
