@@ -117,7 +117,6 @@ body {
   }
 }
 
-/* === ДОБАВЛЕНО ДЛЯ SWIPER НА МОБИЛКЕ === */
 @media (max-width: 767px) {
   .swiper-wrapper {
     flex-wrap: nowrap;
