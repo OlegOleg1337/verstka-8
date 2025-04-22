@@ -5,75 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ремонт техники брендов</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Подключение Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
 <section class="services">
   <h2 class="services__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
 
-  <div class="services__brands-wrapper">
-    <ul class="services__brands-list services__brands-list--collapsed">
-      <li class="services__brands-item">
+  <div class="services__brands-wrapper swiper">
+    <ul class="services__brands-list swiper-wrapper services__brands-list--collapsed">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/samsung.png" alt="Samsung" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/apple.png" alt="Apple" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/viewsonic.png" alt="ViewSonic" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/bosch.png" alt="Bosch" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/hp.png" alt="HP" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/acer.png" alt="Acer" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item">
+      <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/sony.png" alt="Sony" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item services__brands-item--extra">
+      <li class="services__brands-item swiper-slide services__brands-item--extra">
         <a href="" class="services__brands-link">
           <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item services__brands-item--extra">
+      <li class="services__brands-item swiper-slide services__brands-item--extra">
         <a href="" class="services__brands-link">
           <img src="img/samsung.png" alt="Samsung" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
-      <li class="services__brands-item services__brands-item--extra">
+      <li class="services__brands-item swiper-slide services__brands-item--extra">
         <a href="#" class="services__brands-link">
           <img src="img/apple.png" alt="Apple" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
@@ -88,7 +90,11 @@
   </button>
 </section>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
+  // Инициализация кнопки "Показать все"/"Скрыть"
   const toggleBtn = document.querySelector('.services__toggle-btn');
   const toggleText = toggleBtn.querySelector('.services__toggle-text');
   const list = document.querySelector('.services__brands-list');
@@ -99,6 +105,20 @@
       ? 'Показать все'
       : 'Скрыть';
   });
+
+  // Инициализация Swiper для мобильных устройств
+  if (window.innerWidth < 768) {
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  }
 </script>
 
 </body>
