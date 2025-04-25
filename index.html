@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ремонт техники брендов</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Подключение Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
@@ -15,12 +14,14 @@
 
   <div class="services__brands-wrapper swiper">
     <ul class="services__brands-list swiper-wrapper services__brands-list--collapsed">
+      <!-- Слайды брендов -->
       <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
+      <!-- остальные бренды -->
       <li class="services__brands-item swiper-slide">
         <a href="" class="services__brands-link">
           <img src="img/samsung.png" alt="Samsung" class="services__brands-logo" />
@@ -63,6 +64,7 @@
           <img src="img/go.png" alt="Перейти" class="services__brands-arrow" />
         </a>
       </li>
+      <!-- скрытые -->
       <li class="services__brands-item swiper-slide services__brands-item--extra">
         <a href="" class="services__brands-link">
           <img src="img/lenovo.png" alt="Lenovo" class="services__brands-logo" />
@@ -94,7 +96,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  // Инициализация кнопки "Показать все"/"Скрыть"
   const toggleBtn = document.querySelector('.services__toggle-btn');
   const toggleText = toggleBtn.querySelector('.services__toggle-text');
   const list = document.querySelector('.services__brands-list');
@@ -106,17 +107,13 @@
       : 'Скрыть';
   });
 
-  // Инициализация Swiper для мобильных устройств
+  // Swiper  на мобилках
   if (window.innerWidth < 768) {
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       slidesPerView: 'auto',
-      spaceBetween: 16,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
+      spaceBetween: 16
     });
   }
 </script>

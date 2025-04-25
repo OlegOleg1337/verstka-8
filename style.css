@@ -76,7 +76,6 @@ body {
   cursor: pointer;
   padding-left: 24px;
   text-align: left;
-
   display: flex;
   align-items: center;
   gap: 8px;
@@ -110,14 +109,13 @@ body {
   }
 }
 
-/*декстоп*/
 @media (min-width: 1120px) {
   .services__brands-item {
     flex: 0 0 calc(25% - 12px);
   }
 }
 
-/* === ДОБАВЛЕНО ДЛЯ SWIPER НА МОБИЛКЕ === */
+/* SWIPER НА МОБИЛКЕ */
 @media (max-width: 767px) {
   .swiper-wrapper {
     flex-wrap: nowrap;
@@ -133,5 +131,9 @@ body {
 
   .services__toggle-btn {
     display: none;
+  }
+
+  .swiper {
+    overflow: visible;
   }
 }
